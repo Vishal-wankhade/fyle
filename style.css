@@ -5,12 +5,23 @@
 }
 body{
     position: relative;
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
 .loader{
-    position: absolute;
+    position: fixed;
     top:50%;
     left:50%;
-    transform:translate(-50%,-50%)
+    transform:translate(-50%,-50%);
+    height:100px;
+    width: 100px;
+}
+.loader img{
+    height: 100%;
+    width: 100%;
 }
 
 .container{
@@ -37,6 +48,12 @@ body{
     padding: 10px 0px 0px 25px;
     margin: 0px;
    color:var(--headingColor);
+}
+.profile h6{
+    padding: 10px 0px 0px 25px;
+    margin: 0px;
+   color:var(--headingColor);
+  font-size: 20px;
 }
 .profile h3{
     font-weight: 500;
@@ -232,7 +249,8 @@ input[type='text']{
         height: max-content;
         flex-direction: column;
     }
-    .profile h1,h3{
+  
+    .profile h1,h3,h6{
         padding: 5px;
         text-align: center;
       }
@@ -277,6 +295,9 @@ input[type='text']{
   .info{
     width: 90%;
   }
+  .profile h1,h3,h6{
+    font-size: 12px;
+}
  
 }
 @media screen and (max-width:300px){
@@ -294,4 +315,8 @@ input[type='text']{
         font-size: 12px;
     }
 }
-
+#pagination button.active{
+    background-color: var(--headingColor);
+    color: white;
+    font-weight: 700;
+}
